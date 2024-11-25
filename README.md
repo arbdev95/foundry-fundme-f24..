@@ -1,16 +1,16 @@
-#About
+##About
 
 FundMe
 FundMe is a smart contract built on Ethereum using Foundry. It is a decentralized crowdfunding platform that enables users to securely send ETH contributions, ensuring that contributions meet a minimum USD value. The project integrates Chainlink price feeds to fetch live ETH/USD prices, providing accurate and dynamic value calculations.
 
-#Features
+##Features
 
 - Decentralized Crowdfunding: Accepts ETH from multiple contributors.
 -Chainlink Integration: Uses Chainlink oracles to validate contributions against a minimum USD threshold.
 - Secure Fund Management: Only the owner can withdraw funds, ensuring safety and access control.
 - Gas Optimization: Implements a cheaperWithdraw function for efficient handling of contributor data.
 
-#Prerequisites
+##Prerequisites
 
 To use this project, ensure you have:
 
@@ -19,7 +19,7 @@ To use this project, ensure you have:
 - Access to an Ethereum testnet or local blockchain environment like Anvil.
 - A wallet and private key for deployment.
 
-#installation
+##installation
 
 -Clone the repository:
 
@@ -33,7 +33,7 @@ forge install
 
 git submodule update --init --recursive  
 
-#Project Structure
+##Project Structure
 
 - src/: Solidity smart contracts.
    -FundMe.sol: The main crowdfunding contract.
@@ -42,7 +42,7 @@ git submodule update --init --recursive
     -DeployFundMe.s.sol: The deployment script for the FundMe contract.
 - test/: Unit tests and integration tests for contract functionality.
 
-#Usage
+##Usage
 
 1. Compile the Contracts
 Build the smart contracts using Foundry:
@@ -68,16 +68,20 @@ Use Foundry's console to interact with the deployed contract:
 forge console --rpc-url <YOUR_RPC_URL>  
 '''
 
-#Contract Details
+##Contract Details
 
 FundMe Contract
 
     -Purpose: Allows users to send ETH contributions, requiring them to meet a specified minimum USD value.
 Key Functions:
     -fund(): Accepts ETH contributions.
+
     -withdraw(): Enables the contract owner to withdraw all funds.
+
     -cheaperWithdraw(): Optimized version for gas efficiency.
+
     -getAddressToAmountFunded(address): Fetches the contribution amount of a specific address.
+    
     -getFunder(uint256): Retrieves a contributor's address by index.
 
     HelperConfig
